@@ -35,7 +35,7 @@ function PersonalInfo() {
                 </Form.Item>
             </Col>
             <Col span={24}>
-                <Form.Item label="Carrier Objective" name="carrierObjective"
+                <Form.Item label="Career Objective" name="carrierObjective"
                 rules={[{ required: true, message: "required"}]}>
                     <textarea type='text'
                     rows={4} />
