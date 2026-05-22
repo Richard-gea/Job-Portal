@@ -1,16 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 
 import { message, Table } from 'antd';
-import { changeJobStatusFromAdmin, deleteJobById, editJobDetails, getAllJobs } from '../../apis/jobs';
+import { changeJobStatusFromAdmin, deleteJobById, getAllJobs } from '../../apis/jobs';
 import { HideLoading, ShowLoading } from '../../redux/alertSlice';
 import PageTitle from '../../components/PageTitle';
 
 
 
 function AllJobs() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [data, setData] = React.useState([]);
 

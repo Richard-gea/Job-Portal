@@ -1,18 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import { HideLoading, ShowLoading } from "../../redux/alertSlice";
 import {
-  getPostedJobsByUserId,
-  deleteJobById,
   getApplicationsByUserId,
 } from "../../apis/jobs";
 import { message, Table } from "antd";
 import { useEffect } from "react";
 
 function AppliedJobs() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [data, setData] = React.useState([]);
   const getData = async () => {

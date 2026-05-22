@@ -1,10 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getAllJobs } from "../apis/jobs";
 import { HideLoading, ShowLoading } from "../redux/alertSlice";
 import { Col, message, Row } from "antd";
-import PageTitle from "../components/PageTitle";
 import Filters from "../components/Filters";
 
 function Home() {

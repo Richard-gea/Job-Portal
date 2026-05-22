@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import PageTitle from '../components/PageTitle';
-import { Tabs, Alert, notification, message } from 'antd';
+import { Tabs, Alert, message } from 'antd';
 import { HideLoading, ShowLoading } from '../redux/alertSlice';
 import { changeNotificationsStatus } from '../apis/users';
 import { SetReloadNotifications } from '../redux/notifications';

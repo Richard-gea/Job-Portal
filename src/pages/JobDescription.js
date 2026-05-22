@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Col, message, Row } from "antd";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -13,7 +14,6 @@ function JobDescription() {
   const [jobData, setJobData] = React.useState(null);
   const [showApplyButton, setShowApplyButton] = React.useState(true);
   const [alreadyApplied, setAlreadyApplied] = React.useState(false);
-  const user = JSON.parse(localStorage.getItem("user"));
 
   const getData = async () => {
     try {

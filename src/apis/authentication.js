@@ -1,6 +1,5 @@
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { fireDB } from "../firebaseConfig";
-import CryptoJS from "crypto-js";
 
 export const LoginUser = async (payload) => {
   try {
@@ -21,8 +20,6 @@ export const LoginUser = async (payload) => {
         ...doc.data(),
       }));
       const user = snapshotsData[0];
-
-      //const decryptedPassword = CryptoJS.AES.decrypt(user.password,"sheyjobs-lite").toString(CryptoJS.enc.Utf8);
 
       if (user.password === payload.password) {
         return {

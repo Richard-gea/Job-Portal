@@ -1,10 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
 
 import { message, Table } from "antd";
 import { useEffect } from "react";
-import { editJobDetails } from "../../apis/jobs";
 import { HideLoading, ShowLoading } from "../../redux/alertSlice";
 import PageTitle from "../../components/PageTitle";
 import { getAllUsers, updateAdminProfile } from "../../apis/users";

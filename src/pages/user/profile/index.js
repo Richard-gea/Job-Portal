@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import PageTitle from "../../../components/PageTitle";
 import { Form, message, Tabs } from "antd";
@@ -43,7 +44,6 @@ function Profile() {
     const getData = async () => {
         try {
             dispatch(ShowLoading());
-            const user =JSON.parse(localStorage.getItem("user"));
             const response = await getUserProfile(params.id);
             dispatch(HideLoading());
             if (response.success) {

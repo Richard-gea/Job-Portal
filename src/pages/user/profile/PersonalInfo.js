@@ -1,53 +1,52 @@
-import { Col, Row } from 'antd'
-import FormItem from 'antd/es/form/FormItem'
+import { Col, Form, Row } from 'antd'
 import React from 'react'
 
 function PersonalInfo() {
     return (
         <Row gutter={[10, 10]}>
             <Col span={8}>
-                <FormItem label="First Name" name="firstname"
+                <Form.Item label="First Name" name="firstname"
                     rules={[{ required: true, message: "required"}]}>
                     <input type='text' />
-                </FormItem>
+                </Form.Item>
             </Col>
             <Col span={8}>
-                <FormItem label="Last Name" name="lastname"
+                <Form.Item label="Last Name" name="lastname"
                 rules={[{ required: true, message: "required"}]}>
                     <input type='text' />
-                </FormItem>
+                </Form.Item>
             </Col>
             <Col span={8}>
-                <FormItem label="Email" name="email"
+                <Form.Item label="Email" name="email"
                 rules={[{ required: true, message: "required"}]}>
                     <input type='text' />
-                </FormItem>
+                </Form.Item>
             </Col>
             <Col span={8}>
-                <FormItem label="Phone Number" name="phoneNumber"
+                <Form.Item label="Phone Number" name="phoneNumber"
                 rules={[{ required: true, message: "required"}]}>
                     <input type='text' />
-                </FormItem>
+                </Form.Item>
             </Col>
             <Col span={8}>
-                <FormItem label="Portfolio" name="portfolio"
+                <Form.Item label="Portfolio" name="portfolio"
                 rules={[{ required: true, message: "required"}]}>
                     <input type='text' />
-                </FormItem>
+                </Form.Item>
             </Col>
             <Col span={24}>
-                <FormItem label="Carrier Objective" name="carrierObjective"
+                <Form.Item label="Carrier Objective" name="carrierObjective"
                 rules={[{ required: true, message: "required"}]}>
                     <textarea type='text'
                     rows={4} />
                     
-                </FormItem>
+                </Form.Item>
             </Col>
             <Col span={24}>
-                <FormItem label="Address" name="address">
+                <Form.Item label="Address" name="address">
                     <textarea type='text'
                     rows={4} />
-                </FormItem>
+                </Form.Item>
             </Col>
         </Row>
     )

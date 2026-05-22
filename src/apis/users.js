@@ -1,8 +1,7 @@
-import { setDoc, updateDoc,doc, getDoc, getDocs, collection, query, onSnapshot } from "firebase/firestore"
+import { updateDoc,doc, getDoc, getDocs, collection, query, onSnapshot } from "firebase/firestore"
 import {fireDB} from "../firebaseConfig";
 import store from "../redux/store";
 import { SetReadNotifications, SetUnreadNotifications } from "../redux/notifications";
-import { message } from "antd";
 
 export const updateUserProfile = async (payload) => {
     console.log(payload);
@@ -87,7 +86,6 @@ export const getAllUsers = async () => {
 export const getUserNotifications = async () => {
     const user = JSON.parse(localStorage.getItem("user"));
     try {
-        const notifications = [];
         const q = query(collection(fireDB, "users", user.id, "notifications"));
         onSnapshot(q, (querySnapshot) => {
             const notifications = [];
